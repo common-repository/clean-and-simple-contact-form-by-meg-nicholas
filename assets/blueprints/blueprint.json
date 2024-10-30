@@ -1,0 +1,36 @@
+{
+    "landingPage": "\/wp-admin\/options-general.php?page=contact-form-settings",
+    "preferredVersions": {
+        "php": "7.4",
+        "wp": "latest"
+    },
+    "phpExtensionBundles": [
+        "kitchen-sink"
+    ],
+    "features": {
+        "networking": true
+    },
+    "steps": [
+        {
+            "step": "login",
+            "username": "admin",
+            "password": "password"
+        },
+        {
+			"step": "defineWpConfigConsts",
+			"consts": {
+				"CSCF_DEMO": true
+			}
+		},
+        {
+            "step": "installPlugin",
+            "pluginZipFile": {
+                "resource": "url",
+                "url": "https:\/\/downloads.wordpress.org\/plugin\/clean-and-simple-contact-form-by-meg-nicholas.zip"
+            },
+            "options": {
+                "activate": true
+            }
+        }
+    ]
+}
